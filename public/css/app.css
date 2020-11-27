@@ -2579,6 +2579,8 @@ textarea.form-control.is-invalid {
     display: inline-block;
     width: auto;
     vertical-align: middle;
+    max-width: 50px;
+    margin-top: 15px;
   }
 
   .form-inline .form-control-plaintext {
@@ -4666,6 +4668,7 @@ input[type=button].btn-block {
   .navbar-expand-md .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+    margin-left: 115px;
   }
 
   .navbar-expand-md > .container,
@@ -11016,6 +11019,58 @@ a.text-dark:focus {
     height: 48px;
     visibility: hidden;
 }
+
+
+/* Table style */
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #162E58;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #162E58;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #162E58;
+}
+.clubTeam{
+    width: 30px;
+    height: 30px;
+}
+.teamName{
+    margin-top: 7px;
+    margin-left: 12px;
+}
+.League h2{
+    margin-top: 50px;
+}
+
+/* End table style */
+
+
+
 /*.getData h1*/
 /*{*/
 /*    color: white;*/

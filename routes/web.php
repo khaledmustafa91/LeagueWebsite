@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/profile/{id}', function ($id) {
+    return view('profile');
+});
+
+Route::get('/league', function () {
+    return view('league');
+});
+Route::post('/league' , function (Request $request){
+    $name =  \request('user');
+    echo $name;
+    //error_log(\request('user1'));
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
