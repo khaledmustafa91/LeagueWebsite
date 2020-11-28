@@ -1,7 +1,10 @@
 <?php
 
+use App\Models\League;
+use App\Models\LeagueInfo;
+use App\Models\Player;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,9 +28,52 @@ Route::get('/league', function () {
     return view('league');
 });
 Route::post('/league' , function (Request $request){
-    $name =  \request('user');
-    echo $name;
-    //error_log(\request('user1'));
+
+    $request->validate([
+        'players' => 'required',
+        'players.*' => 'required',
+        'numOfPlayers' => 'required',
+        'leagueName' => 'required'
+    ]);
+
+    /* save League name in data base */
+    $leagueName = \request('leagueName');
+    $league = new League();
+    $league->Name = $leagueName;
+    $league->save();
+
+    /* end of save */
+
+
+
+    $numOfPlayers = \request('numOfPlayers');
+
+    $allPlayers = \request('players');
+    for($i = 0 ; $i < $numOfPlayers ; $i++){
+        $player = new Player();
+        $player->Name = $allPlayers[$i];
+        //$player->save();
+
+        $leagueInfo = new LeagueInfo();
+        $leagueInfo->player()->associate(1);
+        $leagueInfo->league()->associate(2);
+        $leagueInfo->club()->associate(3);
+
+        $leagueInfo->save();
+    }
+
+
+
+
+    var_dump($request->all());
+
+
+    return ;
+    var_dump(\request('players'));
+    for($i = 0 ; $i < $numOfPlayers; $i++) {
+        var_dump(\request('club'.$i));
+    }
+
 });
 Auth::routes();
 

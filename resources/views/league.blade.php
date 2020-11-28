@@ -13,14 +13,15 @@
                         {{--Team 1--}}
 
                         <div class="col-lg-4 col-sm-4">
-                            <a name="user" > (User 1) </a>
+                            <span name="user" > (User 1) </span>
+                            <input type="text" value="user1" name="user1" hidden>
                             <img src="images/bayern.png" class="clubTeam">
                             <span class="teamName"> <b>Bayern</b> </span>
                         </div>
 
                             <div class="col-lg-2 col-sm-2">
                                     <div class="form-group">
-                                        <input type="text"  class="form-control" name="user">
+                                        <input type="text"  class="form-control" name="resUser1">
                                     </div>
                             </div>
 

@@ -46,12 +46,16 @@
             <p>Now enter number of players and their teams</p>
             <div class="row">
                 <div class="col-lg-9">
-                    <form action="">
+                    <form action="/league" method="post">
+                        @csrf
                         <div class="form-group row ">
                             <label for="numOfPlayers">Number of players</label>
-                            <input type="text" class="form-control" id="numOfPlayers" placeholder="number of players ">
+                            <input name="numOfPlayers" type="text" class="form-control" id="numOfPlayers" placeholder="number of players ">
                         </div>
-
+                        <div class="form-group row ">
+                            <label for="leagueName">League name</label>
+                            <input name="leagueName" type="text" class="form-control" id="leagueName" placeholder="League name ">
+                        </div>
                         <div class="row">
                             <div class="col-lg-6 alert alert-danger" id="numberError"  >
                                 <p> Please enter a valid number</p>
@@ -81,6 +85,16 @@
                                 </div>
                             </div>
                         </div>
+{{--                        <button type="submit" class="btn btn-info">create league</button>--}}
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                     </form>
                 </div>
                 <div class="col-lg-3 leftImage">
