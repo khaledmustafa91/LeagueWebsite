@@ -21,7 +21,7 @@
                             @for($j = $i+1 ; $j < count($leaguePlayers) ; $j++)
                                 <div class="col-lg-4 col-sm-4">
 
-                                    <img src="{{asset('images/bayern.png')}}" class="clubTeam">
+                                    <img src="{{asset('images/'.$leaguePlayers[$i]->club[0]->path)}}" class="clubTeam">
                                     <input type="text" value="{{$leaguePlayers[$i]->id}}" name="player[]" hidden>
                                     <span class="teamName"> <b>{{$leaguePlayers[$i]->club[0]->Name}}</b> </span>
                                     <span name="user" > ({{$leaguePlayers[$i]->Name}}) </span>
@@ -41,7 +41,7 @@
                                             </div>
                                     </div>
                                 <div class="col-lg-4 col-sm-4">
-                                    <img src="{{asset('images/atltico.png')}}" class="clubTeam">
+                                    <img src="{{asset('images/'.$leaguePlayers[$j]->club[0]->path)}}" class="clubTeam">
                                     <span class="teamName"><b>{{$leaguePlayers[$j]->club[0]->Name}}</b></span>
                                     <span> ({{$leaguePlayers[$j]->Name}}) </span>
                                     <input type="text" value="{{$leaguePlayers[$j]->id}}" name="player[]" hidden>
@@ -137,7 +137,7 @@
                             <td>
                                 <div class="row">
                                     <div class="col-lg-3">
-                                        <img src="{{asset('images/bayern.png')}}" class="clubTeam">
+                                        <img src="{{asset('images/'.$players[$i]->club[0]->path)}}" class="clubTeam">
                                     </div>
                                     <div class="col-lg-9" >
                                         <p class="teamName">{{$players[$i]->club[0]->Name}}</p>
