@@ -9,7 +9,10 @@ class Club extends Model
 {
     use HasFactory;
 
-    public function leagueInfo(){
-        return $this->belongsTo('App\Models\leagueInfo');
+//    public function leagueInfo(){
+//        return $this->belongsTo('App\Models\leagueInfo');
+//    }
+    public function player(){
+        return $this->belongsToMany('App\Models\Player');
     }
 }

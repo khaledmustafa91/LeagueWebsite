@@ -11025,10 +11025,10 @@ a.text-dark:focus {
 
 .styled-table {
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 20px 120px;
     font-size: 0.9em;
     font-family: sans-serif;
-    min-width: 400px;
+    min-width: 855px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 .styled-table thead tr {
@@ -11079,8 +11079,72 @@ a.text-dark:focus {
     margin-top: 0;
     margin-left: 696px;
 }
+
+#UpdateBtn{
+    background-color: #548292;
+    border-color: #548292;
+    position: relative;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    padding: 8px 10px;
+    margin-left: 754px;
+    margin-top: 20px;
+}
 /* End table style */
 
+/* Search btn */
+
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #548292;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus{
+    color: #548292;
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #548292;
+    background: #548292;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+    width: 19%;
+    position: fixed;
+    top: 4.5%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+}
+
+
+
+
+/* End search btn */
 
 
 /*.getData h1*/

@@ -16,6 +16,14 @@ class CreatePlayersTable extends Migration
         Schema::create('players', function (Blueprint $table) {
             $table->id();
             $table->string('Name');
+            $table->integer('MP')->default(0);
+            $table->integer('W')->default(0);
+            $table->integer('D')->default(0);
+            $table->integer('L')->default(0);
+            $table->integer('GF')->default(0);
+            $table->integer('GA')->default(0);
+            $table->integer('GD')->default(0);
+            $table->integer('Pts')->default(0);
         });
     }
 

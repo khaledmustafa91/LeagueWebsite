@@ -46,7 +46,7 @@
             <p>Now enter number of players and their teams</p>
             <div class="row">
                 <div class="col-lg-9">
-                    <form action="/league" method="post">
+                    <form action="/" method="post">
                         @csrf
                         <div class="form-group row ">
                             <label for="numOfPlayers">Number of players</label>
@@ -101,7 +101,20 @@
 
                 </div>
             </div>
+        <form action="/searchLeague" method="get">
+            @csrf
+            <div class="wrap">
+                <div class="search">
+                    <input name="searchedLeagueId" type="text" class="searchTerm" placeholder="search for your league by id">
+                    <button type="submit" class="searchButton">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+        </form>
     </div>
+
 
 </section>
 {{--    </div>--}}
