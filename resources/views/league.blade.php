@@ -7,8 +7,8 @@
         <div class="row League">
             <div class="col-lg-12">
 
-                <h1 style="margin-top: 25px;"> {{$league->Name}} </h1>
-
+                <h1 style="margin-top: 25px;"> {{$league->Name}}  </h1>
+                <p> League id is : <b>{{$league->id}}</b> </p>
                 <h2>Matches</h2>
 
                 <div class="row">
